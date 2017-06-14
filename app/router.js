@@ -7,6 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('waiter');
+  this.route('table');
+  this.route('review', function() {
+    this.route('detail');
+  });
 });
 
 export default Router;
